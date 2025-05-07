@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <link rel="stylesheet" href="Login.css">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+  <link rel="website icon" type="png" href="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcR2GFwQ54MBqg-xSlSuv9I4GHaqCn2GHOt3zXItkl5FtK0TuTM7">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Nunito', sans-serif;
+      background: url('Screenshot (3).png') no-repeat center center;
+      background-size: cover;
+      background-image: url('https://i.pinimg.com/736x/c6/e3/3d/c6e33dd2357466c79702d58675c785f5.jpg');
+      background-position: center;  
+      background-repeat: no-repeat;
+    }
+    .content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      color: white;
+      padding-top: 100px;
+    }
+
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+
+    .navigation {
+        background-color: #bd4812;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  height: 67px;
+}
+
+.logo h1{
+     font-size: 30px;
+  color: white;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+ul {
+    display: flex;
+  list-style: none;
+  margin-left: 154px;
+  gap: 25px;
+ 
+}
+
+li {
+    font-size: 30px;
+  margin-left: 4px;  
+  margin-right: 4px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+    /*separation*/
+    .wrapper {
+      width: 420px;
+      background: rgba(185, 172, 172, 0.85);
+      margin: 120px auto; 
+      padding: 30px 40px;
+      border-radius: 10px;
+      color: #FF5700;
+    }
+
+    .wrapper h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .input-box {
+      position: relative;
+      margin-bottom: 20px;
+    }
+
+    .input-box input {
+      width: 100%;
+      padding: 12px 40px 12px 12px;
+      border-radius: 40px;
+      border: 2px solid rgba(233, 233, 233, 0.726);
+      background: transparent;
+      color: white;
+      font-size: 16px;
+    }
+
+    .input-box i {
+      position: absolute;
+      right: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: white;
+    }
+
+    .remember-forgot {
+      display: flex;
+      justify-content: space-between;
+      font-size: 14.5px;
+      margin-bottom: 15px;
+    }
+
+    .remember-forgot a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .remember-forgot a:hover {
+      text-decoration: underline;
+    }
+
+    .btn {
+      width: 100%;
+      padding: 12px;
+      background: #fff;
+      color: #333;
+      border: none;
+      border-radius: 40px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 16px;
+    }
+
+    .register-link {
+      text-align: center;
+      font-size: 14.5px;
+      margin-top: 20px;
+    }
+
+    .register-link a {
+      color: #fff;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .register-link a:hover {
+      text-decoration: underline;
+    }
+    .btn-link {
+    display: inline-block;
+    padding: 6px 14px;
+    background-color: #bd4812;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+
+  .btn-link:hover {
+    background-color: #a03c10;
+  }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav class="navigation">
+      <div class="logo">
+        <h1>DREAMPLOY</h1>
+      </div>
+      <ul>
+        <li><a href="indexploy.html">Head Quarters 🏠︎</a></li>
+        <li><a href="discoveryploy.html">Discovery</a></li>
+        <li><a href="Searchploy.html">Log In</a></li>
+        <li><a href="aboutploy.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="wrapper">
+    <form action="">
+      <h1>Login</h1>
+      <div class="input-box">
+        <input type="text" placeholder="Username" required>
+        <i class='bx bxs-user'></i>
+      </div>
+      <div class="input-box">
+        <input type="password" placeholder="Password" required>
+        <i class='bx bxs-lock-alt'></i>
+      </div>
+      <div class="remember-forgot">
+        <label><input type="checkbox"> Remember me</label>
+        <a href="Forgot.html">Forgot password?</a>
+      </div>
+      <button type="submit" class="btn">Login</button>
+      <div class="register-link">
+        <p>Don't have an account? <a href="register.html">Register</a></p>
+      </div>
+    </form>
+
+    <!-- Paragraph and button link go here -->
+    <p style="text-align:center; margin-top: 20px; color: black;">
+      Once you've registered, 
+      <a href="Communityploy.html" class="btn-link">click here</a>
+      to join the community!
+    </p>
+  </div>
+
+</body>
+</html>

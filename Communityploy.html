@@ -1,0 +1,123 @@
+<html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f9;
+          }
+          
+          .chat-container {
+            width: 400px;
+            height: 500px;
+            border: 1px solid #ccc;
+            display: flex;
+            flex-direction: column;
+            background-color: #fff;
+          }
+          
+          .chat-box {
+            flex-grow: 1;
+            padding: 10px;
+            overflow-y: auto;
+            border-bottom: 1px solid #ccc;
+          }
+          
+          #messageInput {
+            padding: 10px;
+            border: none;
+            width: 80%;
+            margin: 10px;
+          }
+          
+          #sendButton {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+          }
+          
+          #sendButton:hover {
+            background-color: #45a049;
+          }
+          
+          .message {
+            padding: 8px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+          }
+          
+          .message-user {
+            background-color: #e0ffe0;
+            align-self: flex-start;
+          }
+        
+          .message-other {
+            background-color: #f0f0f0;
+            align-self: flex-end;
+          }
+    </style>
+    </head>
+        <body>
+            <div class="chat-container">
+                <div class="chat-box" id="chatBox">
+                    </div>
+        <input type="text" id="messageInput" placeholder="Type a message..." />
+        <button id="sendButton">Send</button></div>
+        <script src="script.js"></script>
+
+        </body>
+       <script>
+        document.getElementById("sendButton").addEventListener("click", sendMessage);
+
+function sendMessage() {
+  const messageInput = document.getElementById("messageInput");
+  const messageText = messageInput.value.trim();
+
+  if (messageText === "") return;
+
+  // Create a new message element
+  const messageElement = document.createElement("div");
+  messageElement.classList.add("message", "message-user");
+  messageElement.textContent = messageText;
+
+  // Append the message to the chat box
+  const chatBox = document.getElementById("chatBox");
+  chatBox.appendChild(messageElement);
+
+  // Scroll to the bottom of the chat box
+  chatBox.scrollTop = chatBox.scrollHeight;
+
+  // Clear the input field
+  messageInput.value = "";
+
+  // Simulate the other person replying after a short delay
+  setTimeout(() => {
+    receiveMessage("Hello, how can I help you?");
+  }, 1000);
+}
+
+function receiveMessage(messageText) {
+  // Create a new message element for the other person's message
+  const messageElement = document.createElement("div");
+  messageElement.classList.add("message", "message-other");
+  messageElement.textContent = messageText;
+
+  // Append the message to the chat box
+  const chatBox = document.getElementById("chatBox");
+  chatBox.appendChild(messageElement);
+
+  // Scroll to the bottom of the chat box
+  chatBox.scrollTop = chatBox.scrollHeight;
+}
+
+       </script>
+</html>

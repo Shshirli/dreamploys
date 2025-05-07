@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Discovery</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+  <link rel="website icon" type="png" href="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcR2GFwQ54MBqg-xSlSuv9I4GHaqCn2GHOt3zXItkl5FtK0TuTM7">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Nunito', sans-serif;
+      text-align: center;
+      background-color: rgb(248, 241, 233);
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+
+    .navigation {
+      background-color: #bd4812;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2px 20px;
+      height: 67px;
+      position: relative;
+    }
+
+    .logo {
+      font-size: 30px;
+      color: white;
+      position: absolute;
+      left: 20px;
+      font-weight: bold;
+    }
+
+    .logo h1 {
+      margin: 0;
+      font-size: 20px;
+    }
+
+    ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      padding: 10px 0;
+      list-style: none;
+    }
+
+    li {
+      font-size: 30px;
+      margin: 0 15px;
+    }
+
+    a {
+      text-decoration: none;
+      color: white;
+      font-family: 'Nunito', sans-serif;
+    }
+
+    .navbar a:hover {
+      color: #bd4812;
+      background-color: #bd4812;
+    }
+
+    main {
+      padding-top: 100px; 
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    h1 {
+      color: #ef4434;
+      margin-bottom: 60px;
+    }
+
+    .option {
+      display: flex;
+      gap: 160px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .option-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .image-wrapper {
+      padding: 40px;
+      border: 12px solid #f84c21;
+      border-radius: 25px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    .image-wrapper img {
+      width: 130px;
+      height: auto;
+    }
+
+    .option-item button {
+      margin: 0.75em;
+      padding: 0.5em 1em;
+      background-color: #ef4434;
+      color: white;
+      border: none;
+      border-radius: 1em;
+      font-size: 18px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .option-item button:hover {
+      background-color: #d73a2c;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <nav class="navigation">
+      <div class="logo">
+        <p>DREAMPLOY</p>
+      </div>
+      <ul>
+        <li><a href="indexploy.html">Head Quarters 🏠︎</a></li>
+        <li><a href="Communityploy.html">Discovery</a></li>
+        <li><a href="Searchploy.html">Log In</a></li>
+        <li><a href="aboutploy.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Which dream will you dive into today?</h1>
+    <div class="option">
+      <div class="option-item">
+        <div class="image-wrapper">
+          <img src="https://cdn-icons-png.flaticon.com/256/7720/7720159.png" alt="Dream 1">
+        </div>
+        <a href="courseploy.html">
+        <button>Courses</button>
+        </a>
+      </div>
+      <div class="option-item">
+        <div class="image-wrapper">
+          <img src="https://cdn-icons-png.flaticon.com/128/3916/3916670.png" alt="Dream 2">
+        </div>
+        <a href="careerploy.html">
+        <button>Professions</button>
+       </a>
+      </div>
+    </div>
+  </main>
+
+</body>
+</html>
